@@ -5,6 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:ci": "ng build --prod --sourceMap=false --base-href /CrossBrowserTest/",
+    "test:ci": "ng test --watch=false --code-coverage --source-map true",
     "build:prod": "ng build --output-path docs --base-href /CrossBrowserTest/",
     "postbuild:prod": "cp docs/index.html docs/404.html",
     "watch": "ng build --watch --configuration development",
