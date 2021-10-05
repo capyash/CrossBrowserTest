@@ -5,8 +5,11 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:prod": "ng build --output-path docs --base-href /CrossBrowserTest/",
+    "postbuild:prod": "cp docs/index.html docs/404.html",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "deploy": "npm run build:prod && git add . && git commit -m \"Update build\" && git push"
   },
   "private": true,
   "dependencies": {
